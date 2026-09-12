@@ -4,8 +4,6 @@
 
 一个适用于 macOS 和 Windows 的 Synology Drive 忽略文件夹规则管理器，使用 Tauri、Vue 和 Rust 构建。
 
-更完整的使用说明见：[docs/USER_GUIDE.md](/Users/leep/Desktop/Workspace2/synology-drive-ignore/docs/USER_GUIDE.md)。
-
 ## 功能
 
 - 自动检测当前操作系统与 Synology Drive 配置文件
@@ -82,19 +80,6 @@ cargo check --manifest-path src-tauri/Cargo.toml
 ```sh
 pnpm build:windows
 ```
-
-## GitHub Release
-
-项目已包含 GitHub Actions 发布配置：[.github/workflows/release.yml](/Users/leep/Desktop/Workspace2/synology-drive-ignore/.github/workflows/release.yml)。
-
-创建并推送版本标签后会自动构建 macOS DMG 和 Windows NSIS 安装包，并上传到一个草稿 Release：
-
-```sh
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-也可以在 GitHub Actions 页面手动运行 `Release` workflow。
 
 ## English
 
@@ -178,16 +163,3 @@ To cross-build a Windows x64 installer from macOS/Linux after installing LLVM, `
 ```sh
 pnpm build:windows
 ```
-
-## GitHub Release
-
-This project includes a GitHub Actions release workflow: [.github/workflows/release.yml](/Users/leep/Desktop/Workspace2/synology-drive-ignore/.github/workflows/release.yml).
-
-Create and push a version tag to build macOS DMG and Windows NSIS installers automatically, then upload them to a draft Release:
-
-```sh
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-You can also run the `Release` workflow manually from the GitHub Actions page.
